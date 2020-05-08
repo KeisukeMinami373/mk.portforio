@@ -1,12 +1,10 @@
-
 @charset "utf-8";
 
 html {
   font-size: 62.5%;
 }
 body {
- color: #333333;
- background: ;
+ color: #fafafa;
  font-size: 1.2rem;
  font-family: 'Arial Black',YuGothic,'Yu Gothic',sans-serif;
 }
@@ -51,13 +49,14 @@ a:link, a:visited , a:hover  a:active{
 .inner ul { 
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 .inner ul li {
-  margin: 1%;
+  margin: 0 1%;
 }
 .inner ul li a {
   display: inline-block;
-  color: #ffffff;
+  color: #fafafa;
   font-style: italic;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -85,7 +84,6 @@ a:link, a:visited , a:hover  a:active{
   background-position:center;
   height: 100vh;
   width: 100%;
-  margin-top: -2%;
 }
 
 .main-title {
@@ -95,7 +93,7 @@ a:link, a:visited , a:hover  a:active{
   transform: translate(-50%,-50%);
   z-index: 2;
   text-align: center;
-  border: 5px solid #fff;
+  border: 5px solid #fafafa;
   padding: 1% 2%;
   background-color: rgba(0,0,0,0.6);
 }
@@ -103,14 +101,14 @@ a:link, a:visited , a:hover  a:active{
 .main-p {
   font-size: 2.4rem;
   font-style: italic;
-  color: #ffffff;
+  color: #fafafa;
 }
 
 .main-h1 {
   font-size: 8rem;
   line-height: 1.2;
   font-style: italic;
-  color: #fff;
+  color: #fafafa;
   text-shadow: 0 0 10px #f3eb03,0 0 15px #000;
 }
 
@@ -175,6 +173,7 @@ a:link, a:visited , a:hover  a:active{
   padding: 120px 0;
   position: relative;
 }
+
 .about::after{
   content:'01';
   font-size: 8rem;
@@ -185,7 +184,7 @@ a:link, a:visited , a:hover  a:active{
   right: 1%;
 }
 
-.heading{
+.heading{                /* 以下共通要素 */
   position: absolute;
   top: 80px;
   left: 2%;
@@ -197,58 +196,59 @@ a:link, a:visited , a:hover  a:active{
 }
 
 .container{
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
-  margin-bottom: 120px;
 }
-.prof{
-  color: #ffffff;
+.profile{
+  color: #fafafa;
   font-size: 2.4rem;
-  margin-bottom: 4%;
+  margin-bottom: 1%;
 }
 .fa-twitter{
   color: #428DC5;
 }
-.prof a{
+.account{
   color: #428DC5;
   font-size: 2rem;
   transition: all .9s;
+  cursor: pointer;
 }
-.prof a:hover{
+.account:hover{
   opacity: 0.6;
 }
 .about-container{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.text-content{
-  width: calc(100%/2 - 20px);
-  overflow: visible;
-  white-space: nowrap;
-  z-index: 1;
+.about-text-content{
+  width: 60%;
 }
-.text-content li{
-  list-style: none;
-  font-size: 1.4rem;
-  color: #ffffff;
-  line-height: 1.6;
-  padding-left: 1rem;
-  font-family: YuGothic,'Yu Gothic',sans-serif;
-}
-.text-content li:nth-of-type(1),
-.text-content li:nth-of-type(6){
-  font-size: 1.6rem;
+.about-text-title{
+  font-size: 1.8rem;
   font-style: italic;
   letter-spacing: 2px;
   color: #f9eb06;
   font-weight: 600;
-  margin: 8% 0 1% 0;
-  padding-left: 0;
   font-family: 'Arial Black';
+  margin: 6% 0 2% 0;
 }
+.text{
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-family: YuGothic,'Yu Gothic',sans-serif;
+  padding-left: 1rem;
+}
+.about-history li{
+ list-style: none;
+}
+
+.color{
+  color:#646262 ;
+}
+
 .image{
- width: calc(100%/2);
- padding-left: 32px;
+ width: 40%;
  margin-top: 4%;
 }
 .image img{
@@ -293,17 +293,18 @@ a:link, a:visited , a:hover  a:active{
 }
 
 .skill-title{
-  color: #ffffff;
-  font-size: 1.6rem;
+  color: #f9eb06;
+  font-size: 1.8rem;
 }
 .skill-content{
   display: flex;
   justify-content: flex-start;
-  color: #ffffff;
+  color: #fafafa;
   padding: 8% 0;
 }
 .skills-text{
   padding-left: 4%;
+  font-size: 1.4rem;
   line-height: 1.5;
   font-family: YuGothic,'Yu Gothic',sans-serif;
 }
@@ -414,7 +415,7 @@ a:link, a:visited , a:hover  a:active{
 
 .contact-text{
   font-size: 1.6rem;
-  color: #ffffff;
+  color: #fafafa;
   text-align: center;
   margin-bottom: 4%;
   font-family: YuGothic,'Yu Gothic',sans-serif;
@@ -433,7 +434,7 @@ a:link, a:visited , a:hover  a:active{
   padding: 15px;
   border: 1px solid rgba(255,255,255,0.4);
   background-color: rgba(255,255,255,0.05);
-  color: #ffffff;
+  color: #fafafa;
 }
 
 /*=============================================*/
@@ -442,7 +443,7 @@ a:link, a:visited , a:hover  a:active{
 footer{
   background-color: #000;
   text-align: center;
-  padding: 1%;
+  padding: 8%;
 }
 .fab{
   margin: 0 1%;
@@ -464,15 +465,15 @@ footer{
 	display: none;
 	position: fixed;
 	right: 5%;
-	bottom: 5vh;
+	bottom: 2vh;
 	z-index: 100;
 }
 .pagetop::before {
 	content: "";
 	width: 30px;
 	height: 30px;
-	border-left: 3px solid #646262;
-	border-top: 3px solid #646262;
+	border-left: 3px solid #f9eb06;
+	border-top: 3px solid #f9eb06;
 	display: inline-block;
 	-ms-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
@@ -692,7 +693,9 @@ footer{
 /*=================レスポンシブ==================*/
 /*=============================================*/
 
+/* ----------------- */
 /* ハンバーガーメニュー */
+/* ---------------- */
 @media screen and (max-width:768px){
   nav {
     display: block;
@@ -725,11 +728,11 @@ footer{
   nav .inner ul li {
     position: relative;
     margin: 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fafafa;
   }
   nav .inner ul li a {
     display: block;
-    color: #fff;
+    color: #fafafa;
     font-size: 1.6rem;
     padding: 2rem;
     text-decoration: none;
@@ -805,7 +808,10 @@ footer{
   cursor: pointer;
   }
 
+  /* ---- */
   /* main */
+  /* ---- */
+
   .mainvisual:after{
     display: none;
   }
@@ -823,9 +829,11 @@ footer{
     display: none;
   }
 
+  /* ----- */
   /* about */
+  /* ---- */
   .heading{
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
   .container{
     width: 72%;
@@ -838,7 +846,7 @@ footer{
     width: 100%;
     margin-bottom: 2%;
   }
-  .text-content{
+  .about-text-content{
     font-size: 1.2rem;
     width: 100%;
     word-wrap: break-word;
@@ -846,14 +854,14 @@ footer{
     white-space: normal;
     z-index: 0;
   }
-  .about::after{
-    font-size: 6rem;
-  }
-  .prof{
-    font-size: 2rem;
+
+  .profile{
+    font-size: 1.8rem;
   }
 
-  /* skill */
+  /* ------ */
+  /* skills */
+  /* ------ */
   .skills-container{
     display: block;
   }
@@ -861,8 +869,13 @@ footer{
     width:  100%;
     margin-bottom: 8%;
   }
+  .skill-text{
+    font-size: 1.2rem;
+  }
 
+  /* ----- */
   /* works */
+  /* ----- */
   .works-container{
     display: block;
   }
@@ -871,7 +884,9 @@ footer{
     margin: 8% auto;
   }
 
+  /* ------- */
   /* contact */
+  /* ------- */
 
   .contact-form{
     width: 72%;
@@ -885,4 +900,16 @@ footer{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   }
+
