@@ -1,5 +1,5 @@
-'use strict';
 
+'use strict';
 
 // スクロール用
 $(function(){
@@ -56,10 +56,7 @@ $(function(){
       });
     });
 
-     // ローダー用
-  Pace.on('done', function(){
-    $('.wrap').fadeIn();
-  });
+
 
   $(function() {
     //スムーズスクロール
@@ -81,35 +78,24 @@ $(function(){
 
   });
 
-  $('.work-box').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
-    
+// ////////////
+// ローダー用////
+// ////////////
 
+$(function(){
+	var loader = $('.loader-wrap');
+
+	// ページの読み込みが完了したらアニメーションを非表示
+	// $(window).on('load',function(){
+	// 	loader.fadeOut();
+	// });
+
+	//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+	setTimeout(function(){
+    loader.fadeOut();
+    $('#wrap').fadeIn(2000);
+	},3000);
+});
 
   
- 
-
   
