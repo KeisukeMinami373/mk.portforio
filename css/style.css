@@ -91,7 +91,7 @@ a:link, a:visited , a:hover  a:active{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  z-index: 2;
+  z-index: 0;
   text-align: center;
   border: 5px solid #fafafa;
   padding: 1% 2%;
@@ -322,18 +322,17 @@ a:link, a:visited , a:hover  a:active{
 .works-container{
   display: flex;
   justify-content: space-between;
+  list-style: none;
 }
-.work-box{
-  cursor: pointer;
-  display: block;
+.work-item{
+  cursor: pointer; 
   width: calc(100%/3 - 20px);
   height: 280px;
-  transition: .8s;
+  background-color: #fff;
+  transition: all .5s;
 }
-
-.work-box:hover{
+.work-item:hover{
   transform:translateY(-20px) ;
-  /* box-shadow: 0 0 30px rgba(0,0,0,0.2); */
 }
 .work-1{
   background: url(../images/w1.jpg);
@@ -428,10 +427,13 @@ a:link, a:visited , a:hover  a:active{
     text-align: center;
     margin: 4% 4%;
     padding: 4%;
-    background-color: #fafafa;
-    box-shadow:  4px 4px 20px #dbcf05;
-             /* -4px -4px 20px #ffff07; */
+    background-color: #121b1f;
+  
   }
+  .skill-item:hover{
+    box-shadow:  4px 4px 20px #dbcf05;
+  }
+
   .fa-html5{
     color: #E54C22;
   }
@@ -450,7 +452,7 @@ a:link, a:visited , a:hover  a:active{
 
   .skill-name{
     margin-top: 2%;
-    color: #333333;
+    color: #fafafa;
   }
 
 /*=============================================*/
@@ -525,18 +527,18 @@ footer{
 	position: fixed;
 	right: 5%;
 	bottom: 2vh;
-	z-index: 100;
+  z-index: 100;
 }
 .pagetop::before {
 	content: "";
 	width: 30px;
 	height: 30px;
-	border-left: 3px solid #f9eb06;
-	border-top: 3px solid #f9eb06;
+	border-left: 3px solid #333;
+	border-top: 3px solid #333;
 	display: inline-block;
 	-ms-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 
@@ -951,7 +953,7 @@ body{
   .works-container{
     display: block;
   }
-  .work-box{
+  .work-item{
     width: 100%;
     margin: 8% auto;
   }
@@ -967,8 +969,8 @@ body{
     .skill-item{
       width: 45%;
       margin:4% 2%;
+      box-shadow:  4px 4px 20px #dbcf05;
     }
-
 
 
   /* ------- */
@@ -976,7 +978,7 @@ body{
   /* ------- */
 
   .contact-form{
-    width: 72%;
+    width: 80%;
   }
   .contact-text{
     display: none;
