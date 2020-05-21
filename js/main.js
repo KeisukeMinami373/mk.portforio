@@ -1,4 +1,3 @@
-
 'use strict';
 
 // スクロール用
@@ -40,7 +39,7 @@ $(function(){
   } )(jQuery);
    
 
-    // ページトップ
+  // ページトップ
     $(document).ready(function() {
         var pagetop = $('.pagetop');
         $(window).scroll(function () {
@@ -58,8 +57,8 @@ $(function(){
 
 
 
+  //スムーズスクロール
   $(function() {
-    //スムーズスクロール
     let runScroll = function() {
         $('a[href^="#"]').click(function() {
             let speed = 400;
@@ -73,24 +72,50 @@ $(function(){
             return false;
         });
     };
-    // Document Ready
-        runScroll();
+       runScroll();
+    
+    //ローダー用
+        var loader = $('.loader-wrap');
+    setTimeout(function(){
+      loader.fadeOut();
+      $('#wrap').fadeIn(2000);
+    }, 1000);
+    
 
+      // スリック用
+    $('.works-container').slick({
+      arrows:true,
+      autoplay:true,
+      dots:true,
+      speed:1500,
+      easing:'swing',
+      centerMode:true,
+      centerPadding:'25%',
+      prevArrow:'<div class="slide-btn prev-btn"></div>',
+      nextArrow: '<div class="slide-btn next-btn"></div>',
+      
+      responsive:[
+          {
+              breakpoint:768,
+              settings:{
+                  centerPadding:'0%',
+                  slidesToShow:1,
+                  slidesToScroll:1,
+              }
+          }
+      ]
+  });
+    
+    
   });
 
-// ////////////
-// ローダー用////
-// ////////////
+ 
 
-$(function(){
-	var loader = $('.loader-wrap');
-	setTimeout(function(){
-    loader.fadeOut();
-    $('#wrap').fadeIn(2000);
-	},3000);
-});
+
+
+
 
   
+ 
 
-  
   
