@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 
 html {
@@ -19,9 +20,9 @@ a:link, a:visited , a:hover  a:active{
   text-decoration: none;
 }
 
-
-
-
+.sp{
+  display: none;
+}
 /*=============================================*/
 /*=================スクロール用==================*/
 /*=============================================*/
@@ -240,8 +241,10 @@ a:link, a:visited , a:hover  a:active{
   font-family: YuGothic,'Yu Gothic',sans-serif;
   padding-left: 1rem;
 }
+
 .about-history li{
  list-style: none;
+ margin-bottom: 8px;
 }
 
 .color{
@@ -292,10 +295,10 @@ a:link, a:visited , a:hover  a:active{
   margin-bottom: 2%;
   padding: 4%;
 }
-
 .sv-title{
   color: #f9eb06;
   font-size: 1.8rem;
+  font-style: italic;
 }
 .sv-content{
   display: flex;
@@ -321,35 +324,43 @@ a:link, a:visited , a:hover  a:active{
 }
 .works-container{
   display: flex;
-  justify-content: space-between;
-  list-style: none;
+  width: 80%;
+  margin-left: 20%;
+  position: relative;
 }
-.work-item{
-  cursor: pointer; 
-  width: calc(100%/3 - 20px);
-  height: 280px;
-  background-color: #fff;
-  transition: all .5s;
+.works-container li a img{
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
 }
-.work-item:hover{
-  transform:translateY(-20px) ;
+.w-text{
+  text-align: center;
+  color: #ffffff;
 }
-.work-1{
-  background: url(../images/w1.jpg);
-  background-position: bottom;
+/* slick用 */
+.slide-btn{
+  position: absolute;
+  top: 40%;
+  width: 30px;
+  height: 30px;
   background-size: cover;
+  cursor: pointer;
+  display: block;
+  z-index: 10;
 }
-
-.work-2{
-  background: url(../images/w2.jpg);
-  background-position: bottom;
-  background-size: cover;
+.prev-btn{
+  left: 0;
+  background: url(../images/arrow_prev.png) no-repeat center /cover;
 }
-
-.work-3{
-  background: url(../images/w3.jpg);
-  background-position: bottom;
-  background-size: cover;
+.next-btn{
+  right: 0;
+  background: url(../images/arrow_next.png) no-repeat center /cover;
+}
+.slick-slide{
+  margin: 0 20px;
+}
+.slick-dots li.slick-active button:before{
+  color: #24b99f;
 }
 
 .works .btn,
@@ -428,10 +439,20 @@ a:link, a:visited , a:hover  a:active{
     margin: 4% 4%;
     padding: 4%;
     background-color: #121b1f;
-  
+    
   }
   .skill-item:hover{
     box-shadow:  4px 4px 20px #dbcf05;
+  }
+  .skill-name{
+    margin-top: 4%;
+    font-size: 16px;
+    color: #fafafa;
+    font-style: italic;
+    transition: .5s;
+  }
+  .skill-item:hover .skill-name{
+    color: #dbcf05;
   }
 
   .fa-html5{
@@ -450,10 +471,7 @@ a:link, a:visited , a:hover  a:active{
     color: #E22219;
   }
 
-  .skill-name{
-    margin-top: 2%;
-    color: #fafafa;
-  }
+  
 
 /*=============================================*/
 /*==================contact====================*/
@@ -757,6 +775,9 @@ body{
 /*=================レスポンシブ==================*/
 /*=============================================*/
 
+.sp{
+  display: block;
+}
 /* ----------------- */
 /* ハンバーガーメニュー */
 /* ---------------- */
@@ -893,7 +914,7 @@ body{
   }
   .heading{                /* 以下共通要素 */
     position: absolute;
-    top: 32px;
+    top: 64px;
     left: 4%;
     font-size: 3.2rem;
     writing-mode: initial;
@@ -952,6 +973,8 @@ body{
   /* ----- */
   .works-container{
     display: block;
+    width: 100%;
+    margin-left: 0;
   }
   .work-item{
     width: 100%;
@@ -961,24 +984,29 @@ body{
   /* ------- */
   /* skills  */
   /* ------- */
-   
+  
     .skill-container{
-      width: 100%;
-      justify-content: space-between;
+      width: 90%;
+      justify-content: center;
     }
     .skill-item{
-      width: 45%;
-      margin:4% 2%;
-      box-shadow:  4px 4px 20px #dbcf05;
+      width: calc(100% / 2 - 16px);
+      margin:8px 8px;
+      box-shadow: 2px 2px 10px #dbcf05;
     }
-
+   .prev-btn{
+     opacity: 0;
+   }
+   .next-btn{
+     opacity: 0;
+   }
 
   /* ------- */
   /* contact */
   /* ------- */
 
   .contact-form{
-    width: 80%;
+    width: 90%;
   }
   .contact-text{
     display: none;
@@ -1001,4 +1029,3 @@ body{
 
 
   }
-
